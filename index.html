@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="referrer" content="no-referrer">
+
+<title>Kynova · Multi-Axis Strategy — Atopic Dermatitis</title>
+<style>
+:root{--bg:#0a0e16;--panel:#111826;--line:#1d2636;--ink:#e9eef7;--dim:#8694ab;--ok:#39d98a;--warn:#ffb545;--bad:#ff5d6c}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{background:#0a0e16;color:#e9eef7;font:13.5px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif}
+.wrap{display:flex;flex-direction:column;height:100vh}
+header{padding:13px 22px 9px;border-bottom:1px solid #1d2636;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+h1{font-size:16.5px;margin:0;font-weight:600}h1 span{color:#8694ab;font-weight:400}
+.tag{font-size:11px;color:#8694ab;border:1px solid #1d2636;padding:2px 9px;border-radius:999px}
+.tag.ok{color:#39d98a;border-color:#1d3a2c;background:#0f1d16}
+.bar{display:flex;gap:8px;padding:9px 22px;border-bottom:1px solid #1d2636;align-items:center;flex-wrap:wrap}
+.seg{display:flex;border:1px solid #1d2636;border-radius:7px;overflow:hidden}
+.seg button{font:inherit;color:#e9eef7;background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.seg button.on{background:#223354}
+.seg button:hover:not(.on){background:#161f31}
+.chipbar{display:flex;gap:6px;flex-wrap:wrap}
+.ac{display:flex;align-items:center;gap:6px;padding:5px 11px;border-radius:7px;border:1px solid #1d2636;cursor:pointer;user-select:none;background:#121a29;font-size:12.5px}
+.ac .d{width:8px;height:8px;border-radius:50%;background:#333f52}
+.ac.on{background:#19233a}
+.spacer{flex:1}
+.status{font-size:12px;padding:5px 12px;border-radius:999px;border:1px solid #1d2636;color:#8694ab}
+.status.live{color:#ff5d6c;border-color:#3a2030;background:#1b1118}
+.status.broken{color:#39d98a;border-color:#1d3a2c;background:#0f1d16}
+.main{flex:1;display:flex;min-height:0}
+.stage{flex:1;position:relative;min-width:0}
+svg{width:100%;height:100%;display:block}
+aside{width:348px;border-left:1px solid #1d2636;background:#111826;padding:17px;overflow:auto;flex:none}
+aside h2{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#8694ab;margin:0 0 9px}
+aside h3{font-size:15.5px;margin:0 0 3px}
+aside p{color:#c3ccdb;margin:0 0 11px}
+aside ul{margin:0 0 12px;padding-left:16px;color:#c3ccdb}aside li{margin-bottom:4px}
+.kv{border-top:1px solid #1d2636;padding-top:9px;margin-top:6px;font-size:12px;color:#8694ab}
+.kv div{display:flex;justify-content:space-between;gap:10px;padding:1.5px 0}
+.kv b{color:#e9eef7;font-weight:500;text-align:right}
+.liab{font-size:11.5px;color:#ffb545;background:#1d1708;border:1px solid #3a2f12;padding:7px 9px;border-radius:6px;margin-bottom:11px}
+.meter{height:5px;background:#19202e;border-radius:3px;overflow:hidden;margin:3px 0 9px;background:#19202e}
+.meter i{display:block;height:100%;border-radius:3px}
+.legend{position:absolute;left:18px;bottom:14px;font-size:11px;color:#8694ab}
+.legend div{margin-bottom:2px}.legend i{display:inline-block;width:16px;height:2px;vertical-align:middle;margin-right:6px;background:currentColor}
+.hint{position:absolute;right:16px;bottom:14px;font-size:11px;color:#4e5a73}
+text{font-family:inherit;fill:#e9eef7}
+.nl{font-size:12px;font-weight:500;pointer-events:none}
+.ns{font-size:10.5px;fill:#8694ab;pointer-events:none}
+.nn{font-size:11px;fill:#e9eef7;pointer-events:none;font-variant-numeric:tabular-nums}
+.node{cursor:pointer}
+.node rect,.node circle{transition:.16s}
+.node:hover rect,.node:hover circle{filter:brightness(1.4)}
+</style></head><body>
+<div class="wrap">
+<header>
+  <h1>Kynova <span>· Multi-Axis Minibinder Strategy — Atopic Dermatitis</span></h1>
+  <span class="tag">5 cytokine arms · 672 designs evaluated</span>
+  <span class="tag ok">gate logic reproduced from stored sequences</span>
+</header>
+<div class="bar">
+  <div class="seg" id="views">
+    <button data-v="pipe" class="on">Design pipeline</button>
+    <button data-v="mech">Mechanism loop</button>
+    <button data-v="map">Strategy mindmap</button>
+    <button data-v="combo">Pair ranking</button>
+  </div>
+  <span style="color:#8694ab;font-size:12px;margin-left:4px">Axes</span>
+  <div class="chipbar" id="axes"></div>
+  <span class="spacer"></span><span class="status" id="status">—</span>
+</div>
+<div class="main">
+  <div class="stage"><svg id="svg" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid meet"></svg>
+    <div class="legend" id="legend"></div>
+    <div class="hint">click any node for detail</div></div>
+  <aside id="panel"></aside>
+</div></div>
+<script>
+const DATA = {"arms": {"IL-4": {"order": 1, "axis": "Type 2 \u2014 obligate trunk", "color": "#4ea8ff", "pdb_complex": true, "sites": "site I (4 sets) + site II (2 sets)", "blockade": "blocks type I + type II receptor assembly", "note": "Site I is the canonical high-affinity receptor cluster; the site II sets target the pitrakinra-class epitope \u2014 sequestering rather than blocking.", "cov": {"Type2": 2, "Barrier": 2, "Lipid": 2, "Itch": 1, "Remodel": 1}, "liab": "\u2014", "evaluated": 192, "reproduced": true, "designation": "site I \u2014 PRIMARY"}, "IL-13": {"order": 2, "axis": "Type 2 \u2014 dominant effector", "color": "#54c9e8", "pdb_complex": true, "sites": "site III, IL-4R\u03b1 face (3 sets)", "blockade": "blocks IL-4R\u03b1 recruitment to IL-13R\u03b11", "note": "Most crowded ligand target \u2014 lebrikizumab and tralokinumab already approved.", "cov": {"Type2": 2, "Barrier": 2, "Lipid": 2, "Itch": 0, "Remodel": 0}, "liab": "Most crowded ligand target (lebrikizumab/tralokinumab approved)", "evaluated": 160, "reproduced": true, "designation": "site III-A \u2014 PRIMARY"}, "IL-31": {"order": 3, "axis": "Itch \u2014 direct neuronal", "color": "#b084ff", "pdb_complex": true, "sites": "IL31RA face (4 sets) + OSMR\u03b2 face (3 sets)", "blockade": "blocks IL31RA engagement; OSMR\u03b2 face is the second modality", "note": "Two independent receptor faces designed, giving a second modality per target rather than a backup. The OSMR\u03b2 sets overlap the published canine Fab epitope.", "cov": {"Type2": 0, "Barrier": 0, "Lipid": 0, "Itch": 2, "Remodel": 0}, "liab": "\u2014", "evaluated": 72, "reproduced": true, "designation": "IL31RA primary set"}, "TSLP": {"order": 4, "axis": "Alarmin \u2014 upstream initiator", "color": "#39d98a", "pdb_complex": true, "sites": "IL7R\u03b1 face (4 sets) + TSLPR/CRLF2 face (4 sets)", "blockade": "blocks IL7R\u03b1 arm; TSLPR face is the second modality", "note": "The IL7R\u03b1 sets carry zero tezepelumab overlap \u2014 a genuinely novel epitope on a target with an approved competitor. The TSLPR sets do overlap it.", "cov": {"Type2": 2, "Barrier": 0, "Lipid": 0, "Itch": 2, "Remodel": 1}, "liab": "Tezepelumab Ph2 in AD did not clearly separate; alarmin-axis clinical risk", "evaluated": 152, "reproduced": true, "designation": "IL7R\u03b1 primary set"}, "IL-22": {"order": 5, "axis": "Barrier / remodelling", "color": "#ff8a4e", "pdb_complex": true, "sites": "site 1, IL-22RA1 face (4 sets)", "blockade": "blocks IL-22RA1; site1_C is the RA1-selective seam", "note": "One set is a receptor-selective seam: it blocks IL-22RA1 while leaving the IL-22BP decoy receptor free to absorb ligand.", "cov": {"Type2": 0, "Barrier": 2, "Lipid": 1, "Itch": 0, "Remodel": 2}, "liab": "AMP suppression (\u03b2-defensin 2/3, S100A7-A9) \u2014 infection-defence risk in S. aureus-colonised skin", "evaluated": 96, "reproduced": true, "designation": "site 1 core \u2014 PRIMARY"}}, "pairs": [{"arm_a": "TSLP", "arm_b": "IL22", "direct_axes": "Type2+Barrier+Itch+Remodel", "n_direct": 4, "rank": 1, "liabilities": "Tezepelumab Ph2 in AD did not clearly separate; alarmin-axis clinical risk | AMP suppression (beta-defensin 2/3, S100A7-A9) - infection-defence risk in S. aureus-colonised skin"}, {"arm_a": "IL4", "arm_b": "IL31", "direct_axes": "Type2+Barrier+Lipid+Itch", "n_direct": 4, "rank": 2, "liabilities": "-"}, {"arm_a": "IL4", "arm_b": "IL22", "direct_axes": "Type2+Barrier+Lipid+Remodel", "n_direct": 4, "rank": 3, "liabilities": "AMP suppression (beta-defensin 2/3, S100A7-A9) - infection-defence risk in S. aureus-colonised skin"}, {"arm_a": "IL13", "arm_b": "IL31", "direct_axes": "Type2+Barrier+Lipid+Itch", "n_direct": 4, "rank": 4, "liabilities": "Most crowded ligand target (lebrikizumab/tralokinumab approved)"}, {"arm_a": "IL4", "arm_b": "TSLP", "direct_axes": "Type2+Barrier+Lipid+Itch", "n_direct": 4, "rank": 7, "liabilities": "Tezepelumab Ph2 in AD did not clearly separate; alarmin-axis clinical risk"}, {"arm_a": "IL13", "arm_b": "IL22", "direct_axes": "Type2+Barrier+Lipid+Remodel", "n_direct": 4, "rank": 8, "liabilities": "Most crowded ligand target (lebrikizumab/tralokinumab approved) | AMP suppression (beta-defensin 2/3, S100A7-A9) - infection-defence risk in S. aureus-colonised skin"}, {"arm_a": "IL13", "arm_b": "TSLP", "direct_axes": "Type2+Barrier+Lipid+Itch", "n_direct": 4, "rank": 9, "liabilities": "Most crowded ligand target (lebrikizumab/tralokinumab approved) | Tezepelumab Ph2 in AD did not clearly separate; alarmin-axis clinical risk"}, {"arm_a": "IL22", "arm_b": "IL31", "direct_axes": "Barrier+Itch+Remodel", "n_direct": 3, "rank": 19, "liabilities": "AMP suppression (beta-defensin 2/3, S100A7-A9) - infection-defence risk in S. aureus-colonised skin"}, {"arm_a": "IL4", "arm_b": "IL13", "direct_axes": "Type2+Barrier+Lipid", "n_direct": 3, "rank": 64, "liabilities": "Most crowded ligand target (lebrikizumab/tralokinumab approved)"}, {"arm_a": "TSLP", "arm_b": "IL31", "direct_axes": "Type2+Itch", "n_direct": 2, "rank": 71, "liabilities": "Tezepelumab Ph2 in AD did not clearly separate; alarmin-axis clinical risk"}], "totals": {"evaluated": 672}};
+const ARMS = DATA.arms, PAIRS = DATA.pairs, TOT = DATA.totals;
+const ORDER = Object.keys(ARMS).sort((a,b)=>ARMS[a].order-ARMS[b].order);
+const SA = {
+ "V8 protease":{color:"#ff5d6c",axis:"Itch — PAR1, barrier proteolysis",stage:"target assessment",
+   p:"Secreted glutamyl endopeptidase (SspA). Cleaves PAR1 on cutaneous sensory neurons to evoke itch without an immune relay, and degrades desmoglein-1 from outside the barrier.",
+   note:"No designed sequences in the project yet. The closest structural work on file is the SplB homodimer interface (824 Å&sup2;, 6 residues carry 80% of BSA, top-5 share 0.74) — a same-family protease and a usable design template."},
+ "PSM&alpha;3":{color:"#ff7ab8",axis:"Alarmin supply — cytolysis",stage:"target assessment",
+   p:"Cross-&alpha; fibril-forming cytolytic peptide. Lyses keratinocytes, degranulates mast cells IgE-independently, and releases IL-1&alpha;/IL-36 — the alarmin pool the TSLP arm sits downstream of.",
+   note:"No designed sequences yet. Paralogue sequences are on file (psm_paralogue_sequences.csv); short amphipathic peptide, so monomer sequestration is the tractable route rather than active-site blockade."}};
+const AX = {}; ORDER.forEach(a=>AX[a]=true); Object.keys(SA).forEach(a=>AX[a]=true);
+
+const svg=document.getElementById("svg"), NS="http://www.w3.org/2000/svg";
+let view="pipe", selected="__root", particles=[], raf=null;
+const el=(n,a={})=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);return e;};
+const T=(x,y,s,c,anc)=>{const t=el("text",{x,y,class:c||"nl"});if(anc)t.setAttribute("text-anchor",anc);t.textContent=s;return t;};
+
+function chips(){
+  const c=document.getElementById("axes"); c.innerHTML="";
+  const mk=(name,col)=>{const d=document.createElement("div");
+    d.className="ac"+(AX[name]?" on":"");d.innerHTML=`<span class="d" style="${AX[name]?`background:${col};box-shadow:0 0 9px ${col}`:""}"></span>${name}`;
+    d.onclick=()=>{AX[name]=!AX[name];render();};c.appendChild(d);};
+  ORDER.forEach(a=>mk(a,ARMS[a].color)); Object.keys(SA).forEach(a=>mk(a,SA[a].color));
+}
+const nAct=()=>Object.values(AX).filter(Boolean).length;
+
+/* ---------------- view 1: pipeline ---------------- */
+function drawPipe(){
+  svg.innerHTML="";const g=el("g");svg.appendChild(g);particles=[];
+  const cols=[{x:252,l:"Target + epitope"},{x:528,l:"RFdiffusion"},{x:784,l:"ProteinMPNN"},{x:1036,l:"Sequence gate"}];
+  cols.forEach(c=>{g.appendChild(T(c.x,44,c.l,"ns","middle"));
+    g.appendChild(el("line",{x1:c.x-100,y1:56,x2:c.x+100,y2:56,stroke:"#1d2636"}));});
+  const active=ORDER.filter(a=>AX[a]);
+  const y0=100, dy=104;
+  ORDER.forEach((a,i)=>{
+    const A=ARMS[a], on=AX[a], y=y0+i*dy, col=A.color, op=on?1:.22;
+    const rail=el("path",{d:`M156,${y} L1108,${y}`,stroke:col,"stroke-width":1,opacity:op*.25});g.appendChild(rail);
+    g.appendChild(T(96,y+4,a,"nl")).setAttribute("opacity",op);
+    g.appendChild(T(96,y+19,A.axis.split("—")[0].trim(),"ns")).setAttribute("opacity",op);
+    const box=(x,w,h,fill,stroke,o)=>el("rect",{x:x-w/2,y:y-h/2,width:w,height:h,rx:8,fill,stroke,"stroke-width":1.3,opacity:o});
+    // stage nodes
+    const st=[[cols[0].x,A.sites.length>30?A.sites.slice(0,28)+"…":A.sites,""],
+              [cols[1].x,"backbones",""],[cols[2].x,A.evaluated+" designs",""],
+              [cols[3].x,"gate applied",""]];
+    st.forEach((s,k)=>{
+      const w=k===0?214:k===2?150:140;
+      const n=el("g",{class:"node",opacity:op});
+      n.appendChild(box(s[0],w,46,k===4?"#16233a":"#131b2a",col,.95));
+      n.appendChild(T(s[0],y+(s[2]?-3:4),s[1],"nn","middle"));
+      if(s[2])n.appendChild(T(s[0],y+13,s[2],"ns","middle"));
+      n.onclick=()=>{selected=a;render();};g.appendChild(n);
+    });
+    if(on){const p=el("path",{d:`M${cols[0].x+107},${y} L${cols[3].x-70},${y}`,fill:"none",stroke:"none"});
+      g.appendChild(p);for(let k=0;k<3;k++)particles.push({path:p,off:k/3,col});}
+  });
+  // staph arms, stalled at stage 1
+  const yS=y0+5*dy+14;
+  g.appendChild(el("line",{x1:80,y1:yS-28,x2:1108,y2:yS-28,stroke:"#1d2636","stroke-dasharray":"4 4"}));
+  Object.keys(SA).forEach((s,i)=>{
+    const S=SA[s],on=AX[s],y=yS+8+i*54,op=on?1:.22;
+    const n=el("g",{class:"node",opacity:op});
+    n.appendChild(el("rect",{x:cols[0].x-107,y:y-21,width:214,height:42,rx:8,fill:"#131b2a",stroke:S.color,"stroke-width":1.3,"stroke-dasharray":"5 4"}));
+    n.appendChild(T(cols[0].x,y+4,"target assessment","ns","middle"));
+    n.onclick=()=>{selected=s;render();};g.appendChild(n);
+    const lab=T(96,y+4,s.replace("&alpha;","α"),"nl");lab.setAttribute("opacity",op);g.appendChild(lab);
+    const t=T(cols[2].x,y+4,"no designed sequences yet","ns");t.setAttribute("opacity",op*.8);g.appendChild(t);
+  });
+  g.appendChild(T(96,yS+8+2*54+16,"S. aureus effector arms — design not started","ns"));
+  startFlow(g);
+  document.getElementById("legend").innerHTML=
+    `<div style="color:#8694ab">solid rail = sequences built &amp; gate-verified</div>
+     <div style="color:#8694ab">dashed = target defined, design not started</div>`;
+}
+
+/* ---------------- view 2: mechanism ---------------- */
+const MN=[{id:"barrier",x:232,y:132,w:170,h:54,t:"Barrier defect",s:"Filaggrin loss, lipid depletion"},
+ {id:"colon",x:606,y:96,w:170,h:54,t:"S. aureus bloom",s:"Dysbiosis on lesional skin"},
+ {id:"v8",x:940,y:214,w:174,h:54,t:"V8 protease",s:"Glutamyl endopeptidase",ax:"V8 protease"},
+ {id:"psm",x:940,y:400,w:174,h:54,t:"PSMα3",s:"Cross-α cytolysin",ax:"PSM&alpha;3"},
+ {id:"kerat",x:626,y:438,w:200,h:58,t:"Keratinocyte damage",s:"TSLP · IL-33 · IL-1α · IL-36"},
+ {id:"tslp",x:300,y:300,w:150,h:48,t:"TSLP",s:"alarmin",ax:"TSLP"},
+ {id:"th2",x:262,y:420,w:168,h:54,t:"Type 2 axis",s:"IL-4 · IL-13",ax:"IL-4"},
+ {id:"il22",x:470,y:556,w:150,h:48,t:"IL-22",s:"barrier/remodel",ax:"IL-22"},
+ {id:"itch",x:720,y:620,w:200,h:56,t:"Sensory neuron",s:"PAR1 · IL-31RA",ax:null},
+ {id:"il31",x:940,y:556,w:150,h:48,t:"IL-31",s:"itch cytokine",ax:"IL-31"},
+ {id:"scratch",x:230,y:650,w:152,h:50,t:"Scratch",s:"barrier destruction"}];
+const ML=[{s:"barrier",t:"colon"},{s:"colon",t:"v8"},{s:"colon",t:"psm"},
+ {s:"v8",t:"kerat",ax:"V8 protease"},{s:"v8",t:"itch",ax:"V8 protease",c:-80},
+ {s:"psm",t:"kerat",ax:"PSM&alpha;3"},{s:"psm",t:"itch",ax:"PSM&alpha;3",c:50},
+ {s:"kerat",t:"tslp"},{s:"tslp",t:"th2",ax:"TSLP"},{s:"th2",t:"barrier",ax:"IL-4"},
+ {s:"th2",t:"il22"},{s:"il22",t:"barrier",ax:"IL-22",c:-40},
+ {s:"kerat",t:"il31"},{s:"il31",t:"itch",ax:"IL-31"},
+ {s:"th2",t:"itch",ax:"IL-4",c:60},{s:"itch",t:"scratch"},{s:"scratch",t:"barrier"}];
+const nid=i=>MN.find(n=>n.id===i);
+function anch(a,b){const ang=Math.atan2(b.y-a.y,b.x-a.x);
+  const p=(n,s)=>{const hw=n.w/2+7,hh=n.h/2+7,ca=Math.abs(Math.cos(ang)),sa=Math.abs(Math.sin(ang));
+    const t=Math.min(ca?hw/ca:1e9, sa?hh/sa:1e9);return [n.x+Math.cos(ang)*t*s,n.y+Math.sin(ang)*t*s];};
+  return [p(a,1),p(b,-1)];}
+function drawMech(){
+  svg.innerHTML="";const defs=el("defs");
+  const mk=(id,c)=>{const m=el("marker",{id,viewBox:"0 0 10 10",refX:9,refY:5,markerWidth:7,markerHeight:7,orient:"auto-start-reverse"});
+    m.appendChild(el("path",{d:"M0,0 L10,5 L0,10 z",fill:c}));defs.appendChild(m);};
+  mk("a0","#5d6a84");svg.appendChild(defs);
+  const gl=el("g"),gp=el("g"),gn=el("g"),gs=el("g");svg.append(gl,gp,gn,gs);particles=[];
+  ML.forEach(L=>{const a=nid(L.s),b=nid(L.t),[p1,p2]=anch(a,b);let d;
+    if(L.c){const mx=(p1[0]+p2[0])/2,my=(p1[1]+p2[1])/2,nx=-(p2[1]-p1[1]),ny=p2[0]-p1[0],ln=Math.hypot(nx,ny)||1;
+      d=`M${p1[0]},${p1[1]} Q${mx+nx/ln*L.c},${my+ny/ln*L.c} ${p2[0]},${p2[1]}`;}
+    else d=`M${p1[0]},${p1[1]} L${p2[0]},${p2[1]}`;
+    const blk=L.ax&&AX[L.ax], col=L.ax?(ARMS[L.ax]?ARMS[L.ax].color:SA[L.ax].color):"#5d6a84";
+    const p=el("path",{d,fill:"none",stroke:col,"stroke-width":blk?1.3:2.2,opacity:blk?.2:.85,
+      "marker-end":blk?"":"url(#a0)"});
+    if(blk)p.setAttribute("stroke-dasharray","5 5");
+    gl.appendChild(p);
+    if(!blk){for(let i=0;i<3;i++)particles.push({path:p,off:i/3,col});}
+    else{const m=p.getPointAtLength(p.getTotalLength()*.55),gg=el("g");
+      gg.appendChild(el("circle",{cx:m.x,cy:m.y,r:9.5,fill:"#0a0e16",stroke:col,"stroke-width":2}));
+      gg.appendChild(el("path",{d:`M${m.x-4},${m.y-4}L${m.x+4},${m.y+4}M${m.x+4},${m.y-4}L${m.x-4},${m.y+4}`,stroke:col,"stroke-width":2}));
+      gs.appendChild(gg);}});
+  MN.forEach(n=>{const on=!n.ax||AX[n.ax],col=n.ax?(ARMS[n.ax]?ARMS[n.ax].color:SA[n.ax].color):"#2c3a52";
+    const g=el("g",{class:"node"});
+    g.appendChild(el("rect",{x:n.x-n.w/2,y:n.y-n.h/2,width:n.w,height:n.h,rx:10,
+      fill:selected===(n.ax||n.id)?"#1d2a40":"#131b2a",stroke:n.ax?col:"#2c3a52","stroke-width":selected===(n.ax||n.id)?2.2:1.3}));
+    g.appendChild(T(n.x,n.y-3,n.t,"nl","middle"));g.appendChild(T(n.x,n.y+14,n.s,"ns","middle"));
+    g.onclick=()=>{selected=n.ax||n.id;render();};gn.appendChild(g);});
+  svg.querySelectorAll('[stroke="#2c3a52"]').forEach(e=>e.setAttribute("stroke","#2c3a52"));
+  startFlow(gp);
+  document.getElementById("legend").innerHTML=
+   `<div style="color:#5d6a84"><i></i>active pathogenic flux</div>
+    <div style="color:#8694ab">✕ = arm engaged, edge severed</div>`;
+}
+function loopClosed(){const adj={};
+  ML.forEach(L=>{if(L.ax&&AX[L.ax])return;(adj[L.s]=adj[L.s]||[]).push(L.t);});
+  const seen=new Set(),st=[...(adj.barrier||[])];
+  while(st.length){const n=st.pop();if(n==="barrier")return true;
+    if(seen.has(n))continue;seen.add(n);(adj[n]||[]).forEach(m=>st.push(m));}
+  return false;}
+
+/* ---------------- view 3: mindmap ---------------- */
+function drawMap(){
+  svg.innerHTML="";const cx=600,cy=380,g=el("g");svg.appendChild(g);particles=[];
+  const br=ORDER.map(a=>({k:a,col:ARMS[a].color,lab:a,sub:ARMS[a].axis,
+      leaves:[ARMS[a].evaluated+" designs","gate verified",ARMS[a].sites]}))
+    .concat(Object.keys(SA).map(s=>({k:s,col:SA[s].color,lab:s.replace("&alpha;","α"),sub:SA[s].axis,
+      leaves:["target defined","no sequences yet"]})));
+  const sp=Math.PI*2/br.length;
+  br.forEach((b,i)=>{const ang=-Math.PI/2+sp*i,bx=cx+Math.cos(ang)*252,by=cy+Math.sin(ang)*232,on=AX[b.k];
+    const link=el("path",{d:`M${cx},${cy} Q${(cx+bx)/2},${(cy+by)/2} ${bx},${by}`,fill:"none",
+      stroke:b.col,"stroke-width":2.6,opacity:on?.7:.15,"stroke-linecap":"round"});g.appendChild(link);
+    if(on)particles.push({path:link,off:0,col:b.col},{path:link,off:.5,col:b.col});
+    b.leaves.forEach((c,j)=>{const sa=ang+(j-(b.leaves.length-1)/2)*0.29;
+      const sx=bx+Math.cos(sa)*150,sy=by+Math.sin(sa)*132;
+      g.appendChild(el("path",{d:`M${bx},${by} Q${bx+Math.cos(sa)*76},${by+Math.sin(sa)*66} ${sx},${sy}`,
+        fill:"none",stroke:b.col,"stroke-width":1.2,opacity:on?.38:.1}));
+      const txt=c.length>30?c.slice(0,28)+"…":c, tw=Math.max(92,txt.length*6.6+20);
+      const lf=el("g",{opacity:on?1:.22});
+      lf.appendChild(el("rect",{x:sx-tw/2,y:sy-14,width:tw,height:28,rx:14,fill:"#111927",stroke:b.col,"stroke-width":1,opacity:.95}));
+      const t=el("text",{x:sx,y:sy+4,"text-anchor":"middle",class:"ns"});t.setAttribute("fill","#ced7e5");t.textContent=txt;
+      lf.appendChild(t);g.appendChild(lf);});
+    const n=el("g",{class:"node",opacity:on?1:.3});
+    n.appendChild(el("rect",{x:bx-104,y:by-27,width:208,height:54,rx:12,fill:"#16203a",stroke:b.col,"stroke-width":2}));
+    n.appendChild(T(bx,by-4,b.lab,"nl","middle"));
+    n.appendChild(T(bx,by+14,b.sub.length>30?b.sub.slice(0,28)+"…":b.sub,"ns","middle"));
+    n.onclick=()=>{selected=b.k;render();};g.appendChild(n);});
+  const pu=el("circle",{cx,cy,r:64,fill:"none",stroke:"#4ea8ff","stroke-width":1.5,opacity:.45});
+  pu.append(el("animate",{attributeName:"r",values:"64;92;64",dur:"3.4s",repeatCount:"indefinite"}),
+            el("animate",{attributeName:"opacity",values:".45;0;.45",dur:"3.4s",repeatCount:"indefinite"}));
+  g.appendChild(pu);
+  const rg=el("g",{class:"node"});
+  rg.appendChild(el("circle",{cx,cy,r:64,fill:"#15233f",stroke:"#4ea8ff","stroke-width":2}));
+  rg.appendChild(T(cx,cy-8,"KYNOVA","nl","middle"));
+  rg.appendChild(T(cx,cy+9,"AD multi-axis","ns","middle"));
+  const c3=T(cx,cy+26,nAct()+" / 7 arms","ns","middle");c3.setAttribute("fill","#4ea8ff");rg.appendChild(c3);
+  rg.onclick=()=>{selected="__root";render();};g.appendChild(rg);
+  startFlow(g);
+  document.getElementById("legend").innerHTML=`<div style="color:#8694ab">5 built arms · 2 target-stage arms</div>`;
+}
+
+/* ---------------- view 4: pair ranking ---------------- */
+function drawCombo(){
+  svg.innerHTML="";const g=el("g");svg.appendChild(g);particles=[];
+  g.appendChild(T(60,44,"Ranked two-arm combinations — by coverage, orthogonality, feasibility","ns"));
+  const rows=PAIRS.slice(0,10), y0=92, dy=62;
+  rows.forEach((r,i)=>{
+    const y=y0+i*dy, A=r.arm_a.replace("IL","IL-").replace("IL--","IL-"), B=r.arm_b.replace("IL","IL-").replace("IL--","IL-");
+    const ca=ARMS[A]?ARMS[A].color:"#8694ab", cb=ARMS[B]?ARMS[B].color:"#8694ab";
+    const on=(!ARMS[A]||AX[A])&&(!ARMS[B]||AX[B]), op=on?1:.2;
+    const gg=el("g",{class:"node",opacity:op});
+    gg.appendChild(T(66,y+5,"#"+r.rank,"nl"));
+    gg.appendChild(el("rect",{x:104,y:y-15,width:96,height:30,rx:15,fill:"#131b2a",stroke:ca,"stroke-width":1.4}));
+    gg.appendChild(T(152,y+5,A,"nn","middle"));
+    gg.appendChild(T(212,y+5,"+","ns"));
+    gg.appendChild(el("rect",{x:228,y:y-15,width:96,height:30,rx:15,fill:"#131b2a",stroke:cb,"stroke-width":1.4}));
+    gg.appendChild(T(276,y+5,B,"nn","middle"));
+    gg.appendChild(T(348,y+5,r.direct_axes.replace(/\+/g," + "),"ns"));
+    if(r.liabilities&&r.liabilities!=="-")gg.appendChild(T(1172,y+5,"!","nl")).setAttribute("fill","#ffb545");
+    gg.onclick=()=>{selected=ARMS[A]?A:B;render();};g.appendChild(gg);});
+  document.getElementById("legend").innerHTML=
+   `<div style="color:#ffb545">! = carries a documented liability</div>
+    <div style="color:#8694ab">ranked by axis coverage and orthogonality</div>`;
+}
+
+/* ---------------- flow ---------------- */
+function startFlow(layer){
+  if(raf)cancelAnimationFrame(raf);
+  const dots=particles.map(p=>{const c=el("circle",{r:3,fill:p.col,opacity:.95});layer.appendChild(c);return c;});
+  const t0=performance.now();
+  (function tick(now){const e=(now-t0)/1000;
+    particles.forEach((p,i)=>{const L=p.path.getTotalLength();if(!L)return;
+      const u=((e/2.8)+p.off)%1,pt=p.path.getPointAtLength(u*L);
+      dots[i].setAttribute("cx",pt.x);dots[i].setAttribute("cy",pt.y);
+      dots[i].setAttribute("opacity",(u<.06||u>.94)?.08:.95);});
+    raf=requestAnimationFrame(tick);})(t0);
+}
+
+/* ---------------- panel ---------------- */
+function panel(){
+  const P=document.getElementById("panel");
+  if(selected==="__root"||!selected){
+    P.innerHTML=`<h2>Programme</h2><h3>Multi-axis AD strategy</h3>
+      <p>Seven arms across three mechanistic axes, one modality class. Five cytokine arms have designed sequences on file and gate logic reproduced from the stored designs; the two <i>S. aureus</i> effector arms are defined at target level only.</p>
+      <div class="kv">
+        <div><span>Designs evaluated</span><b>${TOT.evaluated}</b></div>
+        <div><span>Arms with sequences</span><b>5 of 7</b></div>
+        <div><span>Modality</span><b>de novo minibinder</b></div>
+      </div>
+      <p style="margin-top:12px;color:#8694ab;font-size:12px">Toggle arms to see which pathogenic edges survive. The loop stays self-sustaining until every return path to the barrier node is cut — that is the argument for combining arms rather than optimising one.</p>`;
+    return;}
+  if(SA[selected]){const S=SA[selected];
+    P.innerHTML=`<h2>Arm · target stage</h2><h3 style="color:${S.color}">${selected}</h3>
+      <div style="color:#8694ab;font-size:12px;margin:-2px 0 10px">${S.axis}</div>
+      <p>${S.p}</p><div class="liab">${S.note}</div>
+      <div class="kv"><div><span>Stage</span><b>target assessment</b></div>
+      <div><span>Designed sequences</span><b>none yet</b></div></div>`;return;}
+  const A=ARMS[selected];if(!A){P.innerHTML="";return;}
+  const pairsFor=PAIRS.filter(r=>[r.arm_a,r.arm_b].map(x=>x.replace("IL","IL-").replace("IL--","IL-")).includes(selected))
+    .sort((a,b)=>a.rank-b.rank).slice(0,3);
+  P.innerHTML=`<h2>Arm · sequences built</h2><h3 style="color:${A.color}">${selected}</h3>
+    <div style="color:#8694ab;font-size:12px;margin:-2px 0 10px">${A.axis}</div>
+    <p>${A.note}</p>
+    ${A.liab&&A.liab!=="—"?`<div class="liab">${A.liab}</div>`:""}
+    <div class="kv">
+      <div><span>Epitope sets</span><b>${A.sites}</b></div>
+      <div><span>Primary set</span><b>${A.designation}</b></div>
+      <div><span>Blockade</span><b style="font-weight:400;color:#c3ccdb">${A.blockade}</b></div>
+      <div><span>Designs evaluated</span><b>${A.evaluated}</b></div>
+      <div><span>Gate reproduced</span><b style="color:${A.reproduced?"#39d98a":"#ff5d6c"}">${A.reproduced?"verified":"not verified"}</b></div>
+    </div>
+    ${pairsFor.length?`<div style="margin-top:13px"><h2>Best pairings</h2>${pairsFor.map(r=>
+      `<div style="font-size:12px;color:#c3ccdb;padding:2px 0">#${r.rank} &nbsp;${r.arm_a} + ${r.arm_b} &nbsp;<span style="color:#8694ab">${r.direct_axes.replace(/\+/g,", ")}</span></div>`).join("")}</div>`:""}`;
+}
+
+function render(){
+  document.querySelectorAll('#views button').forEach(b=>b.classList.toggle("on",b.dataset.v===view));
+  chips();
+  ({pipe:drawPipe,mech:drawMech,map:drawMap,combo:drawCombo})[view]();
+  const st=document.getElementById("status");
+  if(view==="mech"){const c=loopClosed();st.className="status "+(c?"live":"broken");
+    st.textContent=c?"Loop self-sustaining — flux still reaches the barrier":"Loop broken — no return path to barrier";}
+  else if(view==="pipe"){st.className="status";st.textContent=`${TOT.evaluated} designs across 5 built arms`;}
+  else{st.className="status";st.textContent=nAct()+" of 7 arms engaged";}
+  panel();
+}
+document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>{view=b.dataset.v;render();});
+render();
+</script></body></html>
